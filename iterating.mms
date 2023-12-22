@@ -2,12 +2,7 @@
 iter    IS      $0
 a       IS      $1
 b       IS      $2
-c       IS      $3
-
-
-        GREG    @   -- Sets global register $255 as needed for output
-test    BYTE    "minecraft",10,0
-        
+c       IS      $3        
 
         LOC     #100
 
@@ -28,6 +23,4 @@ Main    SET     $0,5
         JMP     loop
         
 
-End     LDA     $255,c
-        TRAP    0,Fputs,StdOut
-        TRAP    0,Halt,0 -- terminate program
+End     TRAP    0,Halt,0 -- terminate program
