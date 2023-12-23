@@ -1,11 +1,6 @@
         LOC     Data_Segment
-iter    IS      $0
-a       IS      $1
-b       IS      $2
-c       IS      $3        
 
         LOC     #100
-
 
 loop    BNP     $0,End
         ADD     $3,$2,$1
@@ -17,9 +12,10 @@ loop    BNP     $0,End
 
 
 
-Main    SET     $0,5
-        SET     $1,2
+Main    SET     $0,10
+        SET     $1,1
         SET     $2,0
+        SET     $3,0
         JMP     loop
         
 
